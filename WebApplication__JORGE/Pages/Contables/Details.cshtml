@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplication__JORGE.Pages.Contables.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>EmpleadosContables</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpleadosContables.RegistrosCreados)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmpleadosContables.RegistrosCreados)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpleadosContables.FacturasCreadas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmpleadosContables.FacturasCreadas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpleadosContables.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmpleadosContables.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.EmpleadosContables.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

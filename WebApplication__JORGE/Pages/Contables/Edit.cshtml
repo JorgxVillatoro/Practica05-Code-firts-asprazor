@@ -1,0 +1,46 @@
+﻿@page
+@model WebApplication__JORGE.Pages.Contables.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>EmpleadosContables</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmpleadosContables.RegistrosCreados" class="control-label"></label>
+                <input asp-for="EmpleadosContables.RegistrosCreados" class="form-control" />
+                <span asp-validation-for="EmpleadosContables.RegistrosCreados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpleadosContables.FacturasCreadas" class="control-label"></label>
+                <input asp-for="EmpleadosContables.FacturasCreadas" class="form-control" />
+                <span asp-validation-for="EmpleadosContables.FacturasCreadas" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="EmpleadosContables.Id" />
+            <div class="form-group">
+<span class="text-danger">*</span>
+                <label asp-for="EmpleadosContables.Nombre" class="control-label"></label>
+                <input asp-for="EmpleadosContables.Nombre" class="form-control" aria-required="true"/>
+                <span asp-validation-for="EmpleadosContables.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

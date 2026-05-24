@@ -1,0 +1,27 @@
+﻿@page
+@model WebApplication_JORGE.Pages.IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-primary">Laboratorio Técnico Integral</h1>
+    <p class="lead">Desarrollado por Jorge - Todo unificado en una sola aplicación.</p>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card text-white bg-dark mb-3 shadow rounded-3 border-0">
+                <div class="card-header fw-bold text-warning border-0">
+                    <i class="bi bi-clock-history"></i> Mantenimiento del Sistema
+                </div>
+                <div class="card-body text-center py-4">
+                    <h5 class="card-title text-muted mb-3">Antigüedad del Sitio Web</h5>
+                    <p class="card-text display-4 fw-bold">@Model.DiasTranscurridos días</p>
+                    <p class="text-muted small mt-2">Fecha de lanzamiento: @Model.FechaCreacion.ToString("dd/MM/yyyy")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

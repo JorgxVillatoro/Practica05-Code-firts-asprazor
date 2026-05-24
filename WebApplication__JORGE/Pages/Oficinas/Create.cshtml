@@ -1,0 +1,46 @@
+﻿@page
+@model WebApplication__JORGE.Pages.Oficinas.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>Oficina</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Oficina.Nombre" class="control-label"></label>
+                <input asp-for="Oficina.Nombre" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Oficina.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Oficina.Direccion" class="control-label"></label>
+                <input asp-for="Oficina.Direccion" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Oficina.Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oficina.Telefono" class="control-label"></label>
+                <input asp-for="Oficina.Telefono" class="form-control" />
+                <span asp-validation-for="Oficina.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
